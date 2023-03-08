@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/my-svelte-component.git"
+    "url": "git+https://github.com/dhimankamal/svelte-google-analytics.git"
   },
   "keywords": [
     "svelte",
@@ -17,13 +17,14 @@
   "author": "Your Name",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/your-username/my-svelte-component/issues"
+    "url": "https://github.com/dhimankamal/svelte-google-analytics/issues"
   },
-  "homepage": "https://github.com/your-username/my-svelte-component#readme",
+  "homepage": "https://github.com/dhimankamal/svelte-google-analytics#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.2.2",
+    "@types/gtag.js": "^0.0.12",
     "rollup": "^2.56.3",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
@@ -31,6 +32,9 @@
     "typescript": "^4.3.5"
   },
   "name": "svelte-google-analytics",
-  "version": "1.0.0",
-  "description": ""
+  "version": "1.0.1",
+  "description": "",
+  "dependencies": {
+    "tslib": "^2.5.0"
+  }
 }
