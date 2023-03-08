@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from "svelte";
+
   export let trackingCode;
   
   function init() {
@@ -14,6 +16,9 @@
     script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingCode}`;
     script.onload = () => init();
     document.head.appendChild(script);
+
+    // Define the dataLayer property on the window object
+    window.dataLayer = window.dataLayer || [];
   });
 
   // Call Google Analytics function to track an event
