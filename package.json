@@ -1,40 +1,33 @@
 {
-  "main": "dist/my-svelte-component.min.js",
-  "module": "dist/my-svelte-component.min.js",
-  "types": "dist/my-svelte-component.d.ts",
+  "name": "svelte-google-analytics",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c -w"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dhimankamal/svelte-google-analytics.git"
   },
-  "keywords": [
-    "svelte",
-    "component"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dhimankamal/svelte-google-analytics/issues"
   },
   "homepage": "https://github.com/dhimankamal/svelte-google-analytics#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.2.2",
-    "@types/gtag.js": "^0.0.12",
-    "rollup": "^2.56.3",
-    "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "svelte": "^3.0.0",
-    "typescript": "^4.3.5"
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^3.18.0",
+    "rollup-plugin-svelte": "^7.1.4",
+    "svelte": "^3.55.1",
+    "typescript": "^4.9.5"
   },
-  "name": "svelte-google-analytics",
-  "version": "1.0.1",
-  "description": "",
   "dependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "tslib": "^2.5.0"
   }
 }

@@ -1,33 +1,33 @@
 <script>
-  import { onMount } from "svelte";
+  export let trackingId = '';
 
-  export let trackingCode;
-  
-  function init() {
+  // Load the Google Analytics script
+  const loadScript = () => {
+    const script = document.createElement('script');
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize the GA tracking code
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', trackingCode);
-  }
+    gtag('config', trackingId);
+  };
 
-  // Initialize Google Analytics when the component is mounted
-  onMount(() => {
-    const script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingCode}`;
-    script.onload = () => init();
-    document.head.appendChild(script);
-
-    // Define the dataLayer property on the window object
-    window.dataLayer = window.dataLayer || [];
-  });
-
-  // Call Google Analytics function to track an event
-  export function trackEvent(eventType, eventAction, eventParams) {
-    window.gtag('event', eventType, {
-      ...eventParams,
-      event_category: eventParams?.event_category || 'default',
-      event_label: eventParams?.event_label || '',
-      event_action: eventAction
-    });
-  }
+  // Load the script when the component is mounted
+  onMount(loadScript);
 </script>
+
+<svelte:head>
+  <!-- Add the Google Analytics tracking code -->
+  {#if trackingId}
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{trackingId}');
+    </script>
+  {/if}
+</svelte:head>
