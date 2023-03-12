@@ -1,8 +1,9 @@
 {
   "name": "svelte-google-analytics",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.ts",
+  "svelte": "./src/index.js",
+  "main": "./src/index.js",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
