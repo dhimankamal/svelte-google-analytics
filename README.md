@@ -1,58 +1,45 @@
-# create-svelte
+# svelte-google-analytics
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+**Description:** A Svelte component to easily integrate Google Analytics tracking into your Svelte applications.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+## Installation
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+You can install this package via npm:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm install svelte-google-analytics
 ```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Usage
 
-```bash
-npm run dev
+To use the `GoogleAnalytics` component, import it into your Svelte file:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```html
+<script lang="ts">
+  import { GoogleAnalytics } from "svelte-google-analytics";
+</script>
+
+<GoogleAnalytics trackingId='YOUR_TRACKING_ID_HERE' />
+<slot />
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## Attributes
 
-## Building
+### `trackingId`
 
-To build your library:
+- **Type:** String
+- **Default:** `"YOUR_TRACKING_ID_HERE"`
+- **Description:** Google Analytics tracking ID. Replace 'YOUR_TRACKING_ID_HERE' with your own tracking ID.
 
-```bash
-npm run package
-```
+## Contributing
 
-To create a production version of your showcase app:
+Contributions are welcome! Please follow the guidelines in [CONTRIBUTING.md](https://github.com/dhimankamal/svelte-google-analytics/blob/main/CONTRIBUTING) before submitting pull requests.
 
-```bash
-npm run build
-```
+## License
 
-You can preview the production build with `npm run preview`.
+This package is licensed under the MIT License. See [LICENSE](https://github.com/dhimankamal/svelte-google-analytics/blob/main/LICENSE) for more details.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Issues
 
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+If you encounter any issues with this package, please report them [here](https://github.com/dhimankamal/ssvelte-google-analytics/issues).

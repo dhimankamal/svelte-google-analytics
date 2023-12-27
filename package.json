@@ -1,6 +1,6 @@
 {
 	"name": "svelte-google-analytics",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -42,5 +42,22 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dhimankamal/svelte-google-analytics.git"
+	  },
+	  "description": "A Svelte component to easily integrate Google Analytics tracking into your Svelte applications.",
+	  "keywords": [
+		"svelte",
+		"google",
+		"analytics",
+		"google-analytics",
+		"component"
+	  ],
+	  "bugs": {
+		"url": "https://github.com/dhimankamal/svelte-google-analytics/issues"
+	  },
+	  "homepage": "https://github.com/dhimankamal/svelte-google-analytics",
+	  "license": "MIT"
 }
