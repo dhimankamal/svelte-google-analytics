@@ -4,7 +4,7 @@
 	export let trackingId = '';
 
 	$: {
-		if (typeof gtag !== 'undefined') {
+		if (typeof gtag !== 'undefined' && trackingId) {
 			gtag('config', trackingId, {
 				page_title: document.title,
 				page_path: $page.url.pathname
